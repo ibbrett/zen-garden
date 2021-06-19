@@ -2,8 +2,8 @@
 * built using node v14.15.1
 
 ## Instructions
-clone repo. 
-run
+1. clone repo 
+2. run
 ```console
 npm install
 npm start
