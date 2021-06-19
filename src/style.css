@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  min-width: 320px;
+  color: #444444;
+}
+
+a:link { color: #0011bb; text-decoration: none; }
+a:visited { color: #6600cc; }
+a:hover { color: #6600cc; text-decoration: underline; }
+a:active { color: #6600cc;}
+
+header {
+  background-color: #ededed;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+header > div {
+    flex: 1;
+    margin: 8px;
+    font-weight: bold;
+}
+
+header .logo {
+  text-align: left;
+}
+
+header .logo img {
+  width: 36px;
+  display: block;
+}
+
+header .label {
+  text-align: center;
+  font-size: 24px;
+  color: #777;
+  min-width: 125px;
+}
+
+header .account {
+  text-align: right;
+}
+
+header .account .welcome-icon {
+  display: none;
+}
+
+.content {
+  margin: 20px auto 0 auto;
+  display: none;
+}
+
+.content .label {
+  font-size: 18px;
+  text-align: center;
+  margin: 8px 0 16px 0;
+}
+
+.content .table {
+  margin: 8px auto;
+  max-width: 600px;
+}
+
+.content .table table {
+  width: 100%;
+}
+
+.content-home { display: block;  }
+.content-detail { display: block; }
+.content-profile { display: block; }
+
+@media only screen and (max-width: 900px){
+  header .label {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  header .label {
+    font-size: 16px;
+  }
+  header .account .welcome-text {
+    display: none;
+  }
+  header .account .welcome-icon {
+    display: inline;
+  }
+}
+
+.wrapper-wrapper { text-align: center; }
+.wrapper { display: inline-block; }
+.grid-container {
+  display: grid;
+  grid-column-gap: 8px;
+  padding: 0 10px;
+}
+.grid-item {
+  padding: 1px 5px;
+  font-size: 14px;
+  text-align: left;
+  white-space: nowrap;
+  margin: 0 0 5px 0;
+}
+
+.content-home .grid-container {
+grid-template-columns: auto auto auto;
+}
+
+.content-detail .grid-container,
+.content-profile .grid-container {
+  grid-template-columns: auto auto;
+}
+
+/* first three items, and every second item */
+.content-home .grid-item:nth-of-type( -n + 3 ),
+.content-home .grid-item:nth-of-type( 3n + 2 ) {
+  text-align: center;
+}
+
+/* first three */
+.content-home .grid-item:nth-of-type( -n + 3 ) {
+  font-weight: bold;
+}
+
+.content-profile .grid-item:nth-of-type( odd ),
+.content-detail .grid-item:nth-of-type( odd ) {
+  font-weight: bold;
+}
+
+.profile-grid-container { display: inline-block; vertical-align: top; }
+
+/**
+ *
+ *  set image to take 100 of parent
+ *  set parent 100 default image width
+ *    set max-height to same dim as width, overflow hidden
+ *     this will ensure the size of image taking up expected image space
+ *     prevents larger images from bleeding into text
+ *
+ **/
+.profile-image { display: inline-block; width: 138px; overflow: hidden; max-height: 138px; }
+.profile-image img { width: 100%; }
+
+.pages-container {
+  text-align: center;
+}
+.pages{
+  list-style-type: none;
+  display: inline-block;
+}
+.pages li {
+  float: left;
+  margin: 20px;
+}
+
+.svg-profile {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  font-size: 24px;
+  color: inherit;
+  fill: currentcolor;
+}
+
+.grid-item.bio {
+  white-space: normal;
+}
+.grid-item-block {
+  clear:left;
+  overflow:auto;
+  max-width: 180px;
+}

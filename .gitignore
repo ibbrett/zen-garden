@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules/
+
+# mac-only files
+.DS_Store
+
+# production
+/build
+
