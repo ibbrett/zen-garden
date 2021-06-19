@@ -2,7 +2,7 @@
 * built using node v14.15.1
 
 ## Instructions
-clone repo
+clone repo. 
 run
 ```console
 npm install
