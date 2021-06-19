@@ -3,7 +3,7 @@
 
 ## Instructions
 1. clone repo 
-2. run
+2. run the following commands:
 ```console
 npm install
 npm start
